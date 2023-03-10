@@ -2,11 +2,11 @@
   "name": "flip_api_data",
   "version": "1.0.0",
   "description": "",
-  "main": "App.js",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node App.js",
-    "yama":"nodemon App.js"
+    "start": "node index.js",
+    "yama":"nodemon index.js"
   },
   "keywords": [],
   "author": "",
