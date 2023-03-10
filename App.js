@@ -5,7 +5,7 @@ let Mongo = require('mongodb')
 let bodyParser = require('body-parser')
 let MongoClint = Mongo.MongoClient
 let MongoUrl = "mongodb+srv://YamanayyaG:Yama1234@cluster0.xaxusar.mongodb.net/FlipkartApi?retryWrites=true&w=majority"
-let Port = 5000
+let Port = process.env.PORT || 5000
 let database;
 
 
