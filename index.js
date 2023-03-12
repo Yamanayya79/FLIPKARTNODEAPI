@@ -125,7 +125,21 @@ App.post('/Placeorder',(req,res)=>{
      res.send('Order placed success')
     })
  })
+
  App.get('/viewOrder',(req,res) => {
+    let email = req.query.email;
+    let query = {};
+    if(email){
+        query={email:email}
+    }else{
+        query={}
+    }
+    database.collection('orders').find(query).toArray((err,data) => {
+        if(err) throw err;
+        res.send(data)
+    })
+})
+ App.get('/orders',(req,res) => {
     let email = req.query.email;
     let query = {};
     if(email){
