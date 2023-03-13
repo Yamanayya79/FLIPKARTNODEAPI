@@ -155,7 +155,7 @@ App.post('/Placeorder',(req,res)=>{
 
 App.post('/ProductList',(req,res) => {
     if(Array.isArray(req.body.id)){
-        db.collection('Products').find({product_id:{$in:req.body.id}}).toArray((err,result) => {
+        db.collection('Test').find({product_id:{$in:req.body.id}}).toArray((err,result) => {
             if(err) throw err;
             res.send(result)
         })
